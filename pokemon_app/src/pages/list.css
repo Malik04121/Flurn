@@ -1,0 +1,56 @@
+.listContainer{
+    display: flex;
+    margin-top: 100px;
+}
+.pokemonData{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+    /* background-color: aquamarine; */
+    /* width: 100%; */
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+.singlePokemon{
+    flex: 0 0 30%; 
+    margin-bottom: 5%;
+    word-wrap: break-word;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.singlePokemon a{
+    text-decoration: none;
+    
+}
+
+#pokemonImage>img{
+    width: 70%;
+}
+.loadButton{
+    background-color: navy;
+    color: white;
+    font-size: larger;
+    width: 15%;
+    border: 0px;
+    padding: 1%;
+    margin-bottom: 15px;
+    margin-right: 38%;
+    margin-left: 42%;
+    cursor: pointer;
+
+}
+
+.singlePokemon>div{
+    width: 100%;
+}
+.searchContainer{
+    margin-top: 80px;
+}
+.detailDiv{
+    margin-top: 100px;
+}

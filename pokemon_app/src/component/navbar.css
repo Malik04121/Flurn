@@ -1,0 +1,46 @@
+
+.navbar{
+    height: 80px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: navy;
+    width: 100%;
+    justify-content: space-around;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+.filterDiv{
+    
+    width: 25%;
+    background-color: rgb(138, 138, 189);
+    margin-top: -20px;
+    padding: 2%;
+    color: white;
+}
+
+.filterCategory{
+    display: flex;
+    margin-top: 2vh;
+    /* justify-content: space-between; */
+}
+.clearFilter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.clearFilter>button{
+    height: 30%;
+    
+    align-content: center;
+    align-items: center;
+}
+label{
+    width: 50%;
+    text-align: left;
+}
+select{
+    flex: 1;
+}
