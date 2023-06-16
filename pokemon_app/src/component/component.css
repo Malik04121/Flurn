@@ -1,0 +1,132 @@
+
+.navbar{
+    height: 80px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: navy;
+    width: 100%;
+    justify-content: space-around;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+.filterDiv{
+    
+    width: 25%;
+    background-color: rgb(138, 138, 189);
+    margin-top: -20px;
+    padding: 2%;
+    color: white;
+}
+
+.filterCategory{
+    display: flex;
+    margin-top: 2vh;
+    /* justify-content: space-between; */
+}
+.clearFilter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.clearFilter>button{
+    height: 30%;
+    
+    align-content: center;
+    align-items: center;
+}
+label{
+    width: 50%;
+    text-align: left;
+}
+select{
+    flex: 1;
+}
+
+.card{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.pokemonTitle{
+    display: flex;
+    /* background-color: bisque; */
+    width: 20%;
+    margin: auto;
+    gap:20px;
+    align-items: center;
+}
+.pokemonTitle>div{
+    margin-left: 100%;
+}
+
+.physicalDetailsBox{
+    display: flex;
+    justify-content: space-around;
+}
+.imageBox{
+    /* background-color: bisque; */
+    /* clip: rect(20px,20px,20px,50px) */
+    height: 250px;
+    overflow: hidden;
+    
+}
+.imageBox>img{
+    width: 20%;
+    clip: rect(100px, 20px, 100px, 20px);
+}
+#type{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+#type>h4{
+    margin-top: 0px;
+    border-radius: 1px solid black;
+    width: 60px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.physicalDetailsBox>div>h4{
+    border-radius: 1px solid black;
+    width: 80px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.featuresBox{
+    display: flex;
+    /* background-color: bisque; */
+    gap: 20%;
+}
+.featuresBox>div{
+    width: 40%;
+}
+
+.statsDiv{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(75, 75, 180);
+    color: white;
+    margin-top: 20px;
+    padding-right: 15%;
+    padding-left: 15%;
+    border-radius: 20px;
+}
+.abilityBox{
+    /* background-color: bisque; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-left: 10%;
+    gap: 20px;
+    
+}
+.abilityBox>h4{
+    border-radius: 1px solid black;
+    width: 100px;
+    line-height: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+}

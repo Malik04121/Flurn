@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { searchPokemonRequest, searchPokemons } from "../component/redux/action"
+import { Card } from "../component/card"
+import "./list.css"
 
 function Search(){
     const [inputValue,setInputValue]=useState("")
@@ -17,11 +19,15 @@ function Search(){
     return(
         <>
           <div className="searchContainer">
-            <div>
+            <div className="searchDiv">
                 <input onChange={getInput}/>
                 <button onClick={searchPokemon}>Search</button>
             </div>
-            {loading?<div>...Loading</div>:error?<div>{errorType}</div>:<div>{pokemon.height}</div>}
+            {loading?<div className="searchStatus">...Loading</div>:error?<div className="searchStatus">{errorType}</div>: <div >
+        {Object.keys(pokemon).length > 0 && (
+            <Card pokemon={pokemon}/>
+        )}
+        </div>}
           </div>
         </>
     )

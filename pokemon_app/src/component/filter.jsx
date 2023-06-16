@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { fetchPokemons, filterPokemon,clearFilter } from "./redux/action";
 import { useDispatch } from "react-redux";
-import "./navbar.css"
+import "./component.css"
 
 
 function Filter(){

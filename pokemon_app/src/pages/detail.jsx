@@ -20,7 +20,9 @@ function Details(){
     return (
         <>
         <div className="detailDiv">
+        {Object.keys(selectedPokemon).length > 0 && (
             <Card pokemon={selectedPokemon}/>
+        )}
         </div>
         </>
     )
