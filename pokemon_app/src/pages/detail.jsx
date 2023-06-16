@@ -6,16 +6,21 @@ import "./list.css"
 
 
 function Details(){
-    const {id}=useParams()
-   const {pokemonList}=useSelector(state=>state)
+    const {name}=useParams()
+   const {pokemonList,filterList}=useSelector(state=>state)
    const [selectedPokemon,setSelectedPokemon]=useState({})
 
    useEffect(()=>{
-       const filteredPokemon=pokemonList.filter(p=>p.id==id)
-       setSelectedPokemon(filteredPokemon[0])
-   },[id])
+        let filteredPokemon
+        if(filterList.length!=0){
+            filteredPokemon=filterList.filter(p=>p.name==name)
+        }
+        else{
+            filteredPokemon=pokemonList.filter(p=>p.name==name)
 
-   console.log(selectedPokemon)
+        }
+       setSelectedPokemon(filteredPokemon[0])
+   },[name])
 
     return (
         <>

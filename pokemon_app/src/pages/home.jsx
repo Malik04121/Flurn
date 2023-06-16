@@ -31,7 +31,7 @@ function Home(){
             
             {pokemonList.map((item,i)=>(
                 <div className="singlePokemon" key={i}>
-                 <Link to={`/details/${item.id}`} >
+                 <Link to={`/details/${item.name}`} >
 
                     <div id="pokemonImage">
                     <img src={item.sprites.front_default} alt={item.name}/>
@@ -45,7 +45,7 @@ function Home(){
             
             {filterList.map((item,i)=>(
                 <div className="singlePokemon">
-                 <Link to={`/details/${item.id}`} >
+                 <Link to={`/details/${item.name}`} >
 
                     <div id="pokemonImage">
                     <img src={item.sprites.front_default}/>

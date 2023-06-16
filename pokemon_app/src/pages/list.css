@@ -77,3 +77,29 @@
 .detailDiv{
     margin-top: 100px;
 }
+.bookmarkedData{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+      height: auto;
+      padding-left: 5%;
+      padding-right: 5%;
+}
+.singleBookmarkedData{
+    margin-bottom: 5%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.removeBox{
+    display: flex;
+    background-color: navy;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}

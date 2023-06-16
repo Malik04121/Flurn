@@ -9,13 +9,10 @@ function Filter(){
     
     const [filterType,setFilterType]=useState('')
    const dispatch=useDispatch()
-    const [filters, setFilters] = useState({
-        type: '',
-        rarity: '',
-        ability: '',
-      });
+    
 
       const handleFilterCategory=(e)=>{
+        reset()
             let filterStr=e.target.value.split(" ")
             let filterCategory=filterStr[0]
             let filterValue=filterStr[1]
@@ -25,17 +22,9 @@ function Filter(){
       const reset=()=>{
         dispatch(clearFilter())
         dispatch(fetchPokemons(0))
-        
-        console.log("sbjgh")
+       
       }
 
-    const handleAbilityChange = (event) => {
-        setFilters({ ...filters, ability: event.target.value });
-      };
-
-      const handleRarityChange = (event) => {
-        setFilters({ ...filters, rarity: event.target.value });
-      };
     return(
         <>
         <div className="filterDiv">
@@ -48,10 +37,10 @@ function Filter(){
        <div className="filterCategory">
 
             <label>Abilities:</label>
-            <select value={filters.ability} onChange={handleFilterCategory}>
+            <select  onChange={handleFilterCategory}>
              <option value="">All Abilities</option>
-             <option value="overgrow">Overgrow</option>
-             <option value="blaze">Blaze</option>
+             <option value="ability overgrow">Overgrow</option>
+             <option value="ability blaze">Blaze</option>
              <option value="ability battle-armor">Battle_armour</option>
         {/* Other ability options */}
             </select>
@@ -59,24 +48,26 @@ function Filter(){
 
             <div className="filterCategory">
 
-            <label>Characteristics:</label>
+            <label>Nature:</label>
 
-            <select value={filters.rarity} onChange={handleFilterCategory}>
-        <option value="">All Characteristics</option>
-        <option value="common">Common</option>
-        <option value="rare">Rare</option>
+            <select onChange={handleFilterCategory}>
+        <option value="">All Nature</option>
+        <option value="nature rash">Rash</option>
+        <option value="nature mild">Mild</option>
+        <option value="nature bold">Bold</option>
         {/* Other rarity options */}
       </select>
       </div>
 
       <div className="filterCategory">
 
-      <label>Group:</label>
+      <label>Stats:</label>
 
-      <select value={filters.rarity} onChange={handleFilterCategory}>
-        <option value="">All Group</option>
-        <option value="common">Common</option>
-        <option value="rare">Rare</option>
+      <select  onChange={handleFilterCategory}>
+        <option value="">All Stats</option>
+        <option value="pokeathlon-stat speed">Speed</option>
+        <option value="pokeathlon-stat power">Power</option>
+        <option value="pokeathlon-stat stamina">Stamina</option>
         {/* Other rarity options */}
       </select>
       </div>
@@ -84,10 +75,11 @@ function Filter(){
        <div className="filterCategory">
       <label>Habitate:</label>
 
-      <select value={filters.rarity} onChange={handleFilterCategory}>
+      <select  onChange={handleFilterCategory}>
         <option value="">All Habitate</option>
-        <option value="common">Common</option>
-        <option value="rare">Rare</option>
+        <option value="pokemon-habitat forest">Forest</option>
+        <option value="pokemon-habitat grassland">Grassland</option>
+        <option value="pokemon-habitat urban">Urban</option>
         {/* Other rarity options */}
       </select>
       </div>

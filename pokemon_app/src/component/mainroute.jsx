@@ -9,7 +9,7 @@ function MainRoute(){
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/search" element={<Search/>}/>
-        <Route path="/details/:id" element={<Details/>}/>
+        <Route path="/details/:name" element={<Details/>}/>
         <Route path="/bookmark" element={<Bookmark/>}/>
       </Routes>
     )
